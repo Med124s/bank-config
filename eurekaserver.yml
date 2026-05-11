@@ -1,0 +1,13 @@
+server:
+  port: 8070
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #Matjibch list dyal services mn chi Eureka akhor   حيت هاد app راه هي server بوحدها، ماشي client.
+    fetchRegistry: false
+    #Matregisterich rassek f Eureka   حيت Eureka Server ماحتاجاش تسجل راسها.
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
